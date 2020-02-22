@@ -1,9 +1,8 @@
 <template>
   <div :class="$style.background">
     <div :class="$style.hero">
-      <h1>I am test</h1>
-      <p></p>
-      <button>Hire me</button>
+      <h2>Hallo</h2>
+      <h1>Ik ben Kenrick Dietrich</h1>
     </div>
   </div>
 </template>
@@ -30,5 +29,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: $default-border-radius;
+  padding: $spacing-default;
 }
 </style>
