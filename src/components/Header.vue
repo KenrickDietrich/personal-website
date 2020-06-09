@@ -1,11 +1,11 @@
 <template>
-  <div :class="$style.background">
+  <div :class="$style.background" id="header">
     <div :class="$style.hero">
       <h1>{{ title }}</h1>
       <p>{{ paragraph }}</p>
-      <base-button v-scroll-to="{ el: '#service', duration: 1500 }"
-        >discover more</base-button
-      >
+      <base-button v-scroll-to="{ el: '#about', duration: 1500 }">
+        discover more
+      </base-button>
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
 <style lang="scss" module>
 .background {
   height: 100vh;
-  background: url('../assets/header-bg.jpg');
+  background: url('../assets/header.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +48,6 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8);
     border-radius: $default-border-radius;
     padding: $spacing-default;
   }

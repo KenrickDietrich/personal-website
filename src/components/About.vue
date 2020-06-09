@@ -13,7 +13,7 @@
           </b-col>
           <b-col>
             <div>
-              <h1>Wie ben ik?</h1>
+              <h1>Wie ik ben</h1>
               <p>Dit is de paragraaf met informatie text</p>
             </div>
           </b-col>

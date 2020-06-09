@@ -6,11 +6,11 @@
         'Ik ben 3e jaars student software engineer aan het Saxion, Welkom op mijn persoonlijke website'
       "
     ></Header>
-    <Service />
     <About />
+    <Service />
     <Portfolio />
-    <Quote />
-    <Info />
+    <!-- <Quote /> -->
+    <!-- <Info /> -->
     <Contact />
     <Footer />
   </div>
@@ -23,8 +23,6 @@ import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
-import Info from '@/components/Info';
-import Quote from '@/components/Quote';
 
 export default {
   name: 'home',
@@ -34,9 +32,7 @@ export default {
     Service,
     About,
     Portfolio,
-    Info,
     Footer,
-    Quote,
   },
 };
 </script>
