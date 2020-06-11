@@ -3,7 +3,9 @@
     <div :class="$style.hero">
       <h1>{{ title }}</h1>
       <p>{{ paragraph }}</p>
-      <base-button v-scroll-to="{ el: '#about', duration: 1500 }">
+      <base-button
+        v-scroll-to="{ el: '#about', duration: 1500, offset: -80 }"
+      >
         discover more
       </base-button>
     </div>

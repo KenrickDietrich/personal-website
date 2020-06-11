@@ -6,31 +6,47 @@
       toggleable="md"
       fixed="top"
     >
-      <div href="#" v-scroll-to="{ el: '#header', duration: 1500 }">
-        <img src="@/assets/logo.png" alt="Logo" />
-      </div>
+      <img
+        :class="$style.img"
+        href="#"
+        v-scroll-to="{ el: '#header', duration: 1500 }"
+        src="@/assets/logo.png"
+        alt="Logo"
+      />
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse :class="$style.items" id="nav-collapse" is-nav>
         <b-nav-item
           href
-          v-scroll-to="{ el: '#about', duration: 1500 }"
+          v-scroll-to="{ el: '#about', duration: 1500, offset: -80 }"
           >Over mij</b-nav-item
         >
         <b-nav-item
           href
-          v-scroll-to="{ el: '#service', duration: 1500 }"
+          v-scroll-to="{
+            el: '#service',
+            duration: 1500,
+            offset: -80,
+          }"
           >Service</b-nav-item
         >
         <b-nav-item
           href
-          v-scroll-to="{ el: '#portfolio', duration: 1500 }"
+          v-scroll-to="{
+            el: '#portfolio',
+            duration: 1500,
+            offset: -80,
+          }"
           >Portfolio</b-nav-item
         >
         <b-nav-item
           href
-          v-scroll-to="{ el: '#contact', duration: 1500 }"
+          v-scroll-to="{
+            el: '#contact',
+            duration: 1500,
+            offset: -80,
+          }"
           >Contact</b-nav-item
         >
       </b-collapse>
@@ -66,9 +82,12 @@ export default {
 
 <style lang="scss" module>
 .navbar {
-  img {
-    width: 30%;
-    display: block;
+  height: 90px;
+  background-color: rgba($color: #ffffff, $alpha: 0);
+  transition: 0.5s;
+
+  .img {
+    width: 80px;
   }
 
   .items {
@@ -86,13 +105,6 @@ export default {
 <style lang="scss">
 .bg {
   background-color: white;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+  transition: 0.5s;
 }
 </style>
