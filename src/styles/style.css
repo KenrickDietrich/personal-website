@@ -48,18 +48,6 @@ Service
 About
  */
 
-#about {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  text-align: center;
-  width: 100%;
-  display: inline-block;
-}
-
-#about-img {
-  max-width: 70%;
-}
 
 /*
 Portfolio
