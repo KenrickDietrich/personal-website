@@ -3,11 +3,7 @@
     <b-container class="container" fluid>
       <b-row>
         <b-col>
-          <img
-            src="../assets/about.jpg"
-            alt="image"
-            class="img-fluid"
-          />
+          <img src="../assets/about.jpg" alt="image" />
         </b-col>
         <b-col>
           <div>
@@ -32,7 +28,7 @@ export default {
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
-  width: 100%;
+  width: 100vw;
   display: inline-block;
 
   img {
