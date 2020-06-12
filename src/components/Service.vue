@@ -1,9 +1,7 @@
 <template>
   <base-section id="service" :class="$style.service">
     <b-container :class="$style.container" fluid>
-      <div>
-        <h1>Ik heb ervaring met</h1>
-      </div>
+      <h1>Ik heb ervaring met</h1>
 
       <base-row>
         <b-row data-aos="fade-up">
