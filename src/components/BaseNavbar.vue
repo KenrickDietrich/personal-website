@@ -83,8 +83,8 @@ export default {
 <style lang="scss" module>
 .navbar {
   height: 90px;
-  background-color: rgba($color: #ffffff, $alpha: 0);
-  transition: 0.5s;
+  background-color: rgba($color: $background-color, $alpha: 0);
+  transition: $transition;
 
   .img {
     width: 80px;
@@ -104,7 +104,7 @@ export default {
 
 <style lang="scss">
 .bg {
-  background-color: white;
-  transition: 0.5s;
+  background-color: $background-color;
+  transition: $transition;
 }
 </style>
