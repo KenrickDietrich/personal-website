@@ -1,5 +1,5 @@
 <template>
-  <section id="about" :class="$style.about">
+  <base-section id="about" :class="$style.about">
     <b-container class="container" fluid>
       <b-row>
         <b-col>
@@ -13,23 +13,22 @@
         </b-col>
       </b-row>
     </b-container>
-  </section>
+  </base-section>
 </template>
 
 <script>
+import BaseSection from '@/components/BaseSection.vue';
 export default {
   name: 'About',
+  components: {
+    BaseSection,
+  },
 };
 </script>
 
 <style lang="scss" module>
 .about {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
   text-align: center;
-  width: 100vw;
-  display: inline-block;
 
   img {
     max-width: 70%;

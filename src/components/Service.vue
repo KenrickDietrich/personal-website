@@ -1,11 +1,11 @@
 <template>
-  <section id="service" :class="$style.service">
+  <base-section id="service" :class="$style.service">
     <b-container :class="$style.container" fluid>
       <div>
         <h1>Ik heb ervaring met</h1>
       </div>
 
-      <div :class="$style.row">
+      <base-row>
         <b-row data-aos="fade-up">
           <b-col md="4" sm="4">
             <div :class="$style.servicethumb">
@@ -44,57 +44,52 @@
             </div>
           </b-col>
         </b-row>
-      </div>
+      </base-row>
     </b-container>
-  </section>
+  </base-section>
 </template>
 
 <script>
+import BaseSection from '@/components/BaseSection.vue';
+import BaseRow from '@/components/BaseRow.vue';
 export default {
   name: 'Service',
+  components: {
+    BaseRow,
+    BaseSection,
+  },
 };
 </script>
 
 <style lang="scss" module>
 .service {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
   background: $background-color;
   text-align: center;
-  width: 100%;
-  display: inline-block;
 
   .container {
     max-width: 70vw;
   }
 
-  .row {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    position: relative;
+  .servicethumb {
+    background: $background-white;
+    border-radius: $default-border-radius;
+    padding: 42px 22px;
+    margin-bottom: $spacing-default;
+    transition: $transition;
+    height: 300px;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
 
-    .servicethumb {
-      background: $background-white;
-      border-radius: 5px;
-      padding: 42px 22px;
-      position: relative;
-      top: 0;
-      margin-bottom: 10px;
-      transition: 0.5s;
-      height: 300px;
-      box-shadow: black;
-
-      &:hover {
-        background: rgba($color: $primary-color-text, $alpha: 0.8);
-        color: $background-color;
-        padding: 50px 30px;
-      }
+    &:hover {
+      background: rgba($color: $primary-color-text, $alpha: 0.8);
+      color: $background-color;
+      padding: 50px 30px;
     }
+  }
 
-    .iconcontainer {
-      padding-bottom: 8px;
-    }
+  .iconcontainer {
+    padding-bottom: $spacing-default;
   }
 }
 </style>
