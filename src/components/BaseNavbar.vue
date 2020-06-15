@@ -49,6 +49,9 @@
           }"
           >Contact</b-nav-item
         >
+        <b-nav-item @click="openGame">
+          Spooky Trouble
+        </b-nav-item>
       </b-collapse>
     </b-navbar>
   </div>
@@ -69,8 +72,10 @@ export default {
         this.isActive = false;
       }
     },
+    openGame() {
+      window.open('https://spookytrouble-10a66.web.app/');
+    },
   },
-
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
   },

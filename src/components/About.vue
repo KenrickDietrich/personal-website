@@ -33,6 +33,9 @@ export default {
   img {
     max-width: 70%;
     border-radius: $default-border-radius;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
   }
 }
 </style>
