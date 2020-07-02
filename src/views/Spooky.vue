@@ -18,7 +18,7 @@
     </div>
     <p>
       Spooky Trouble is a game I made for my minor creative design and
-      technoligy. The primary goal was to 
+      technoligy. The primary goal was to
     </p>
   </div>
 </template>
