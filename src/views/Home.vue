@@ -9,8 +9,6 @@
     <About />
     <Service />
     <Portfolio />
-    <!-- <Quote /> -->
-    <!-- <Info /> -->
     <Contact />
     <Footer />
   </div>

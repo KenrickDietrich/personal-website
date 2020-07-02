@@ -6,13 +6,9 @@
       toggleable="md"
       fixed="top"
     >
-      <img
-        :class="$style.img"
-        href="#"
-        v-scroll-to="{ el: '#header', duration: 1500 }"
-        src="@/assets/logo.png"
-        alt="Logo"
-      />
+      <b-nav-item :to="'/'">
+        <img :class="$style.img" src="@/assets/logo.png" alt="Logo" />
+      </b-nav-item>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -49,7 +45,7 @@
           }"
           >Contact</b-nav-item
         >
-        <b-nav-item @click="openGame">
+        <b-nav-item :to="'/spookytrouble'">
           Spooky Trouble
         </b-nav-item>
       </b-collapse>
@@ -95,14 +91,15 @@ export default {
     width: 80px;
   }
 
-  .items {
-    a {
-      color: $primary-color-text;
+  a {
+    color: $primary-color-text;
+    &:hover {
+      color: rgba($color: $primary-color-text, $alpha: 0.5);
     }
+  }
 
-    li {
-      list-style-type: none;
-    }
+  li {
+    list-style-type: none;
   }
 }
 </style>
