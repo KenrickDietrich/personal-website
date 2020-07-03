@@ -1,5 +1,15 @@
 <template>
   <div>
+    <b-navbar
+      ref="navbar"
+      :class="[$style.navbar, { bg: isActive }]"
+      toggleable="md"
+      fixed="top"
+    >
+      <b-nav-item :to="'/'">
+        <img :class="$style.img" src="@/assets/logo.png" alt="Logo" />
+      </b-nav-item>
+    </b-navbar>
     <div :class="$style.background" id="header">
       <h1>Spooky Trouble</h1>
       <div :class="$style.hero" @click="openGame">
@@ -122,10 +132,27 @@ export default {
     BaseRow,
     BaseSection,
   },
+  data() {
+    return { scrollPosition: null, isActive: false };
+  },
   methods: {
     openGame() {
       window.open('https://spookytrouble-10a66.web.app/');
     },
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+      if (this.scrollPosition > 300) {
+        this.isActive = true;
+      } else {
+        this.isActive = false;
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+  destroy() {
+    window.removeEventListener('scroll', this.updateScroll);
   },
 };
 </script>
@@ -227,5 +254,33 @@ export default {
     margin-top: -200px;
     transform: rotate(10deg);
   }
+}
+
+.navbar {
+  height: 90px;
+  background-color: rgba($color: $background-color, $alpha: 0);
+  transition: $transition;
+
+  .img {
+    width: 80px;
+  }
+
+  a {
+    color: $primary-color-text;
+    &:hover {
+      color: rgba($color: $primary-color-text, $alpha: 0.5);
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+</style>
+
+<style lang="scss">
+.bg {
+  background-color: $background-color;
+  transition: $transition;
 }
 </style>

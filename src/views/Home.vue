@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div>
+    <base-navbar></base-navbar>
     <Header
       :title="'Hallo, ik ben Kenrick Dietrich'"
       :paragraph="
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+import BaseNavbar from '@/components/BaseNavbar.vue';
 import Header from '@/components/Header.vue';
 import Service from '@/components/Service';
 import About from '@/components/About';
@@ -25,6 +27,7 @@ import Contact from '@/components/Contact';
 export default {
   name: 'home',
   components: {
+    BaseNavbar,
     Contact,
     Header,
     Service,

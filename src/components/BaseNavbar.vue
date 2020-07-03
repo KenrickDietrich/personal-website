@@ -6,7 +6,14 @@
       toggleable="md"
       fixed="top"
     >
-      <b-nav-item :to="'/'">
+      <b-nav-item
+        href
+        v-scroll-to="{
+          el: '#header',
+          duration: 1500,
+          offset: -80,
+        }"
+      >
         <img :class="$style.img" src="@/assets/logo.png" alt="Logo" />
       </b-nav-item>
 
@@ -45,9 +52,6 @@
           }"
           >Contact</b-nav-item
         >
-        <b-nav-item :to="'/spookytrouble'">
-          Spooky Trouble
-        </b-nav-item>
       </b-collapse>
     </b-navbar>
   </div>

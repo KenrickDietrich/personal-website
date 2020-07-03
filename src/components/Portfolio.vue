@@ -2,35 +2,33 @@
   <base-section id="portfolio" :class="$style.portfolio">
     <b-container class="container" fluid>
       <h1>Portfolio</h1>
-      <p>projecten die ik heb gedaan</p>
-
       <base-row>
         <b-row>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb">
-              <div :class="$style.overlay">project 1</div>
+            <div :class="$style.thumb" @click="spookyTrouble">
+              <div :class="$style.overlay">Spooky Trouble</div>
               <img
-                src="../assets/work-image1.jpg"
+                src="@/assets/spookytrouble.png"
                 alt="image"
                 class="img-fluid"
               />
             </div>
           </b-col>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb">
-              <div :class="$style.overlay">project 2</div>
+            <div :class="$style.thumb" @click="gent">
+              <div :class="$style.overlay">Gent In The Middle</div>
               <img
-                src="../assets/work-image2.jpg"
+                src="@/assets/gent.png"
                 alt="image"
                 class="img-fluid"
               />
             </div>
           </b-col>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb">
-              <div :class="$style.overlay">project 3</div>
+            <div :class="$style.thumb" @click="aileen">
+              <div :class="$style.overlay">Aileen Dietrich</div>
               <img
-                src="../assets/work-image3.jpg"
+                src="@/assets/aileen.png"
                 alt="image"
                 class="img-fluid"
               />
@@ -51,6 +49,17 @@ export default {
   components: {
     BaseRow,
     BaseSection,
+  },
+  methods: {
+    spookyTrouble() {
+      this.$router.push({ name: 'Spooky' });
+    },
+    gent() {
+      window.open('https://gentinthemiddle.nl/');
+    },
+    aileen() {
+      window.open('https://www.aileendietrich.nl/');
+    },
   },
 };
 </script>
