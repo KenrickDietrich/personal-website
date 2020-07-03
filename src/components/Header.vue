@@ -6,7 +6,7 @@
       <base-button
         v-scroll-to="{ el: '#about', duration: 1500, offset: -80 }"
       >
-        discover more
+        Meer over mij
       </base-button>
     </div>
   </div>

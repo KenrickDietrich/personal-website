@@ -72,20 +72,14 @@
             <div class="section-title">
               <h2>Contact Info</h2>
               <p>
-                Lorem ipsum dolor sit consectetur adipiscing morbi
-                venenatis et tortor consectetur adipisicing lacinia
-                tortor morbi ultricies.
+                <i class="fa fa-comment"></i>
+                <a href="mailto:kenrickdietrich@gmail.com">
+                  kenrickdietrich@gmail.com
+                </a>
+                <br />
+                <i class="fas fa-phone"></i>06 39 27 14 49
               </p>
             </div>
-
-            <p></p>
-            <p>
-              <i class="fa fa-comment"></i>
-              <a href="mailto:kenrickdietrich@gmail.com"
-                >kenrickdietrich@gmail.com</a
-              >
-            </p>
-            <p><i class="fas fa-phone"></i>06 39 27 14 49</p>
           </div>
         </div>
       </div>
