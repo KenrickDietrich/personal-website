@@ -8,7 +8,7 @@
         <b-col>
           <div>
             <h1>Wie ik ben</h1>
-            <p>Dit is de paragraaf met informatie text</p>
+            <p></p>
           </div>
         </b-col>
       </b-row>

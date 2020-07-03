@@ -9,10 +9,6 @@
             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;"
           >
             <h2>Get in touch</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur venenatis
-              tincidunt.
-            </p>
           </div>
         </div>
 
