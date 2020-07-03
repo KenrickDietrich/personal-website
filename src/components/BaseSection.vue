@@ -15,7 +15,7 @@ export default {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-  width: 100vw;
+  width: 100%;
   display: inline-block;
 }
 </style>
