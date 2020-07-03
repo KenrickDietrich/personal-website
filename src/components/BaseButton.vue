@@ -30,7 +30,7 @@ export default {
     transition: $transition;
   }
 
-  // TODO: NEEDS CLEVER WAY TO GET ACCESIBILIY BACK
+  // TODO: NEEDS CLEVER WAY TO GET ACCESIBILTIY BACK
   &:focus {
     outline: 0;
   }

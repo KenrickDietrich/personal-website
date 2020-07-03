@@ -2,7 +2,7 @@
   <div>
     <div :class="$style.background" id="header">
       <h1>Spooky Trouble</h1>
-      <div :class="$style.hero">
+      <div :class="$style.hero" @click="openGame">
         <img :class="$style.logo" src="@/assets/spooky-logo.png" />
         <img src="@/assets/Character.png" />
         <img :class="$style.floor" src="@/assets/Floor.png" />
@@ -16,22 +16,123 @@
         />
       </div>
     </div>
-    <p>
-      Spooky Trouble is a game I made for my minor creative design and
-      technoligy. The primary goal was to
-    </p>
+    <base-section id="service" :class="$style.service">
+      <b-container :class="$style.container" fluid>
+        <base-row>
+          <b-row data-aos="fade-up">
+            <b-col md="6">
+              <div :class="$style.thumb">
+                <base-text-container
+                  :title="'Why'"
+                  :paragraph="
+                    'Spooky Trouble is a game I made for my minor creative design and technology. My primary goal was to learn how to create pixel art and create a game using Unity. I chose Unity because I felt held back by processing, a program where I created the first version of Spooky Trouble with.'
+                  "
+                />
+              </div>
+            </b-col>
+            <b-col md="6">
+              <div :class="[$style.thumb, $style.hover]">
+                <img
+                  :class="$style.image"
+                  src="@/assets/Character.png"
+                />
+              </div>
+            </b-col>
+          </b-row>
+        </base-row>
+        <base-row>
+          <b-row data-aos="fade-up">
+            <b-col md="6">
+              <div :class="$style.thumb">
+                <base-text-container
+                  :title="'Story'"
+                  :paragraph="
+                    'You find yourself in an old and abandoned house. You hear noises, old wood creaking. You see something and rub your eyes, are those ghosts? Find your way out.'
+                  "
+                >
+                </base-text-container>
+              </div>
+            </b-col>
+            <b-col md="6">
+              <div :class="[$style.thumb, $style.hover]">
+                <img
+                  :class="$style.image"
+                  src="@/assets/Spook1.png"
+                />
+                <img :class="$style.boo" src="@/assets/Boo.png" />
+              </div>
+            </b-col>
+          </b-row>
+        </base-row>
+        <base-row>
+          <b-row data-aos="fade-up">
+            <b-col md="6">
+              <div :class="$style.thumb">
+                <base-text-container
+                  :title="'Goal'"
+                  :paragraph="
+                    'To find your way out you have to collect all the keys to unlock the doors.'
+                  "
+                ></base-text-container>
+              </div>
+            </b-col>
+            <b-col md="6">
+              <div :class="[$style.thumb, $style.hover]">
+                <img :class="$style.image" src="@/assets/Key.png" />
+              </div>
+            </b-col>
+          </b-row>
+        </base-row>
+        <base-row>
+          <b-row data-aos="fade-up">
+            <b-col md="6">
+              <div :class="$style.thumb">
+                <base-text-container
+                  :title="'How to play'"
+                  :paragraph="
+                    'The game is played using the keyboard. You use the arrowkeys to move around, up and down, the spacebar to jump, z key to prone and x to pickup and interact with items.'
+                  "
+                ></base-text-container>
+              </div>
+            </b-col>
+            <b-col md="6">
+              <div :class="[$style.thumb, $style.hover]">
+                <img :class="$style.image" src="@/assets/Keys.png" />
+              </div>
+            </b-col>
+          </b-row>
+        </base-row>
+        <base-button @click.native="openGame">
+          Play Game
+        </base-button>
+      </b-container>
+    </base-section>
   </div>
 </template>
 <script>
+import BaseTextContainer from '@/components/BaseTextContainer.vue';
+import BaseButton from '@/components/BaseButton.vue';
+import BaseRow from '@/components/BaseRow.vue';
+import BaseSection from '@/components/BaseSection.vue';
 export default {
   name: 'Spooky',
+  components: {
+    BaseTextContainer,
+    BaseButton,
+    BaseRow,
+    BaseSection,
+  },
+  methods: {
+    openGame() {
+      window.open('https://spookytrouble-10a66.web.app/');
+    },
+  },
 };
 </script>
 
 <style lang="scss" module>
 .background {
   height: calc(100vh - 150px);
-  background: $background-white;
   text-align: center;
 
   h1 {
@@ -50,7 +151,11 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: $default-border-radius;
-    padding: 10rem 10rem 58px 10rem;
+    padding: 10rem 10rem 40px 10rem;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     .logo {
       top: 60px;
@@ -74,10 +179,53 @@ export default {
     }
     .floor {
       position: absolute;
-      top: 420px;
-      right: 60px;
+      top: 404px;
+      right: 0;
       z-index: -1;
+      border-radius: $default-border-radius;
     }
+  }
+}
+
+.service {
+  background: $background-color;
+  text-align: center;
+
+  .container {
+    max-width: 70vw;
+  }
+
+  .thumb {
+    background: $background-white;
+    border-radius: $default-border-radius;
+    padding: $spacing-default;
+    margin-bottom: $spacing-default;
+    transition: $transition;
+    min-height: 300px;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+  }
+
+  .hover {
+    height: 300px;
+    padding: $spacing-default;
+    &:active {
+      background: rgba($color: $primary-color-text, $alpha: 0.8);
+      color: $background-color;
+      padding: 30px;
+    }
+    &:hover {
+      background: rgba($color: $primary-color-text, $alpha: 0.8);
+      color: $background-color;
+      padding: 30px;
+    }
+  }
+
+  .boo {
+    height: 60px;
+    margin-top: -200px;
+    transform: rotate(10deg);
   }
 }
 </style>

@@ -68,9 +68,6 @@ export default {
         this.isActive = false;
       }
     },
-    openGame() {
-      window.open('https://spookytrouble-10a66.web.app/');
-    },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll);
