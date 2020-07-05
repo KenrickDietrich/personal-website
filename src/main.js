@@ -24,7 +24,6 @@ import ScrollTo from 'vue-scrollto';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-require('@/styles/style.css');
 Vue.config.productionTip = false;
 library.add(
   faVuejs,

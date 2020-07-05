@@ -4,8 +4,8 @@ $font-family: 'Open Sans', sans-serif;
 
 // spacing
 $spacing-default: 1rem;
-$spacing-large: 2 * $spacing-default;
-$spacing-small: 2 / $spacing-default;
+$spacing-large: $spacing-default * 2;
+$spacing-small: $spacing-default / 2;
 
 // border radius
 $default-border-radius: 6px;
