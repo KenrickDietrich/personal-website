@@ -1,6 +1,6 @@
 <template>
   <base-section id="about" :class="$style.about">
-    <b-container fluid>
+    <b-container class="container" fluid>
       <b-row>
         <b-col>
           <img src="../assets/about.jpg" alt="image" />
@@ -39,7 +39,7 @@ export default {
   text-align: center;
 
   p {
-    text-align: left;
+    text-align: inherit;
   }
 
   img {
