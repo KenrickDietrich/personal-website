@@ -1,6 +1,6 @@
 <template>
   <base-section id="about" :class="$style.about">
-    <b-container class="container" fluid>
+    <b-container fluid>
       <b-row>
         <b-col>
           <img src="../assets/about.jpg" alt="image" />
@@ -8,7 +8,15 @@
         <b-col>
           <div>
             <h1>Wie ik ben</h1>
-            <p></p>
+            <p>
+              Ik ben Kenrick Dietrich en ben 20 jaar oud. Ik ben
+              derdejaarsstudent HBO-ICT aan het Saxion in Enschede.
+              Als frontend developer streef ik naar het onwikkelen van
+              innovatieve en creatieve producten met oog voor
+              accessibility en performance.
+              <br />
+              Ik ben gemotiveerd, doelgericht en een echte teamplayer.
+            </p>
           </div>
         </b-col>
       </b-row>
@@ -29,6 +37,10 @@ export default {
 <style lang="scss" module>
 .about {
   text-align: center;
+
+  p {
+    text-align: left;
+  }
 
   img {
     max-width: 70%;
