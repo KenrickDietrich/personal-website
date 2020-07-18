@@ -10,8 +10,8 @@
             <h1>Wie ik ben</h1>
             <p>
               Ik ben Kenrick Dietrich en ben 20 jaar oud. Ik ben
-              derdejaarsstudent HBO-ICT aan het Saxion in Enschede.
-              Als frontend developer streef ik naar het onwikkelen van
+              student HBO-ICT aan het Saxion in Enschede. Als
+              front-end developer streef ik naar het onwikkelen van
               innovatieve en creatieve producten met oog voor
               accessibility en performance.
               <br />

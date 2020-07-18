@@ -7,6 +7,7 @@
       fixed="top"
     >
       <b-nav-item
+        :class="$style.logo"
         href
         v-scroll-to="{
           el: '#header',
@@ -14,7 +15,11 @@
           offset: -80,
         }"
       >
-        <img :class="$style.img" src="@/assets/logo.png" alt="Logo" />
+        <img
+          :class="$style.img"
+          src="../assets/logo.png"
+          alt="Logo"
+        />
       </b-nav-item>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -23,7 +28,7 @@
         <b-nav-item
           href
           v-scroll-to="{ el: '#about', duration: 1500, offset: -80 }"
-          >Over mij</b-nav-item
+          ><div :class="$style.underline">Over mij</div></b-nav-item
         >
         <b-nav-item
           href
@@ -32,8 +37,8 @@
             duration: 1500,
             offset: -80,
           }"
-          >Service</b-nav-item
-        >
+          ><div :class="$style.underline">Service</div>
+        </b-nav-item>
         <b-nav-item
           href
           v-scroll-to="{
@@ -41,8 +46,9 @@
             duration: 1500,
             offset: -80,
           }"
-          >Portfolio</b-nav-item
         >
+          <div :class="$style.underline">Portfolio</div>
+        </b-nav-item>
         <b-nav-item
           href
           v-scroll-to="{
@@ -50,7 +56,8 @@
             duration: 1500,
             offset: -80,
           }"
-          >Contact</b-nav-item
+        >
+          <div :class="$style.underline">Contact</div></b-nav-item
         >
       </b-collapse>
     </b-navbar>
@@ -88,6 +95,13 @@ export default {
   background-color: rgba($color: $background-color, $alpha: 0);
   transition: $transition;
 
+  .logo {
+    a {
+      padding: 0;
+      display: unset;
+    }
+  }
+
   .img {
     width: 80px;
   }
@@ -101,6 +115,28 @@ export default {
 
   li {
     list-style-type: none;
+  }
+
+  .underline {
+    display: inline-block;
+    position: relative;
+    color: hsl(222, 25%, 14%);
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      left: 0;
+      top: 30px;
+      background-color: black;
+      transform-origin: bottom right;
+      transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
 </style>

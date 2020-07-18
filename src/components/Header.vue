@@ -53,5 +53,14 @@ export default {
     border-radius: $default-border-radius;
     padding: $spacing-default;
   }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: 400;
+  }
 }
 </style>

@@ -2,9 +2,9 @@
   <div>
     <base-navbar></base-navbar>
     <Header
-      :title="'Hallo, ik ben Kenrick Dietrich'"
+      :title="'Kenrick Dietrich'"
       :paragraph="
-        'Ik ben 3e jaars student software engineer aan het Saxion, Welkom op mijn persoonlijke website'
+        'Front-end developer met oog voor performance en accessibility'
       "
     ></Header>
     <About />
