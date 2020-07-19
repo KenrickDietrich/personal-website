@@ -31,6 +31,7 @@
         <b-nav-item
           href
           v-scroll-to="{ el: '#about', duration: 1500, offset: -80 }"
+          @click="closeMenu"
           ><div :class="$style.underline">Over mij</div></b-nav-item
         >
         <b-nav-item
@@ -40,6 +41,7 @@
             duration: 1500,
             offset: -80,
           }"
+          @click="closeMenu"
           ><div :class="$style.underline">Service</div>
         </b-nav-item>
         <b-nav-item
@@ -49,6 +51,7 @@
             duration: 1500,
             offset: -80,
           }"
+          @click="closeMenu"
         >
           <div :class="$style.underline">Portfolio</div>
         </b-nav-item>
@@ -59,6 +62,7 @@
             duration: 1500,
             offset: -80,
           }"
+          @click="closeMenu"
         >
           <div :class="$style.underline">Contact</div></b-nav-item
         >
@@ -76,6 +80,9 @@ export default {
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+      if (screen.width < 767) {
+        this.isActive = true;
+      }
       if (this.scrollPosition > 300) {
         this.isActive = true;
       } else {
@@ -83,6 +90,9 @@ export default {
       }
     },
     openMenu() {
+      this.menuOpen = !this.menuOpen;
+    },
+    closeMenu() {
       this.menuOpen = !this.menuOpen;
     },
   },
@@ -156,6 +166,6 @@ export default {
   transition: $transition;
 }
 .menu {
-  height: 300px;
+  height: 260px;
 }
 </style>
