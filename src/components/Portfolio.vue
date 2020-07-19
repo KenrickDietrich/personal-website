@@ -5,7 +5,11 @@
       <base-row>
         <b-row>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb" @click="spookyTrouble">
+            <div
+              :class="$style.thumb"
+              @click="spookyTrouble"
+              tabindex="0"
+            >
               <div :class="$style.overlay">Spooky Trouble</div>
               <img
                 src="@/assets/spookytrouble.png"
@@ -15,7 +19,7 @@
             </div>
           </b-col>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb" @click="gent">
+            <div :class="$style.thumb" @click="gent" tabindex="0">
               <div :class="$style.overlay">Gent In The Middle</div>
               <img
                 src="@/assets/gent.png"
@@ -25,7 +29,7 @@
             </div>
           </b-col>
           <b-col md="4" sm="4">
-            <div :class="$style.thumb" @click="aileen">
+            <div :class="$style.thumb" @click="aileen" tabindex="0">
               <div :class="$style.overlay">Aileen Dietrich</div>
               <img
                 src="@/assets/aileen.png"
@@ -45,7 +49,7 @@ import BaseSection from '@/components/BaseSection.vue';
 import BaseRow from '@/components/BaseRow.vue';
 
 export default {
-  name: 'Portfolie',
+  name: 'Portfolio',
   components: {
     BaseRow,
     BaseSection,

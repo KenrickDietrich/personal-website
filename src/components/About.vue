@@ -7,7 +7,7 @@
         </b-col>
         <b-col>
           <div>
-            <h1>Wie ik ben</h1>
+            <h1>Over mij</h1>
             <p>
               Ik ben Kenrick Dietrich en ben 20 jaar oud. Ik ben
               student HBO-ICT aan het Saxion in Enschede. Als

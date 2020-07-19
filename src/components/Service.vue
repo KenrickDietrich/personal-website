@@ -4,9 +4,9 @@
       <h1>Ik heb ervaring met</h1>
 
       <base-row>
-        <b-row data-aos="fade-up">
-          <b-col md="4" sm="4">
-            <div :class="$style.servicethumb">
+        <b-row data-aos="fade-up" :class="$style.row">
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.servicethumb" tabindex="0">
               <div :class="$style.iconcontainer">
                 <font-awesome-icon
                   :icon="['fab', 'vuejs']"
@@ -17,8 +17,8 @@
               <p>Vue.js websites of web applicaties</p>
             </div>
           </b-col>
-          <b-col md="4" sm="4">
-            <div :class="$style.servicethumb">
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.servicethumb" tabindex="0">
               <div :class="$style.iconcontainer">
                 <font-awesome-icon
                   :icon="['fab', 'android']"
@@ -29,8 +29,8 @@
               <p>Naitive Android apps</p>
             </div>
           </b-col>
-          <b-col md="4" sm="4">
-            <div :class="$style.servicethumb">
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.servicethumb" tabindex="0">
               <div :class="$style.iconcontainer">
                 <font-awesome-icon
                   :icon="['fab', 'java']"
@@ -67,6 +67,14 @@ export default {
   .container {
     max-width: 70vw;
   }
+  .row {
+    display: flex;
+    justify-content: center;
+    .wrapper {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
 
   .servicethumb {
     background: $background-white;
@@ -82,7 +90,7 @@ export default {
     &:hover {
       background: rgba($color: $primary-color-text, $alpha: 0.8);
       color: $background-color;
-      padding: 50px 30px;
+      padding-top: 50px;
     }
   }
 

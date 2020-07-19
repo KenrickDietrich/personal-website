@@ -29,10 +29,5 @@ export default {
     border-color: $primary-color-text;
     transition: $transition;
   }
-
-  // TODO: NEEDS CLEVER WAY TO GET ACCESIBILTIY BACK
-  &:focus {
-    outline: 0;
-  }
 }
 </style>
