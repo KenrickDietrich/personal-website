@@ -92,6 +92,11 @@ export default {
       color: $background-color;
       padding-top: 50px;
     }
+    &:focus {
+      background: rgba($color: $primary-color-text, $alpha: 0.8);
+      color: $background-color;
+      padding-top: 50px;
+    }
   }
 
   .iconcontainer {

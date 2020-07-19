@@ -3,14 +3,12 @@
     <b-container class="container" fluid>
       <h1>Portfolio</h1>
       <base-row>
-        <b-row>
-          <b-col md="4" sm="4">
-            <div
-              :class="$style.thumb"
-              @click="spookyTrouble"
-              tabindex="0"
-            >
-              <div :class="$style.overlay">Spooky Trouble</div>
+        <b-row :class="$style.row">
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.thumb" @click="spookyTrouble">
+              <div :class="$style.overlay" tabindex="0">
+                Spooky Trouble
+              </div>
               <img
                 src="@/assets/spookytrouble.png"
                 alt="image"
@@ -18,9 +16,11 @@
               />
             </div>
           </b-col>
-          <b-col md="4" sm="4">
-            <div :class="$style.thumb" @click="gent" tabindex="0">
-              <div :class="$style.overlay">Gent In The Middle</div>
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.thumb" @click="gent">
+              <div :class="$style.overlay" tabindex="0">
+                Gent In The Middle
+              </div>
               <img
                 src="@/assets/gent.png"
                 alt="image"
@@ -28,9 +28,11 @@
               />
             </div>
           </b-col>
-          <b-col md="4" sm="4">
-            <div :class="$style.thumb" @click="aileen" tabindex="0">
-              <div :class="$style.overlay">Aileen Dietrich</div>
+          <b-col lg="4" :class="$style.wrapper">
+            <div :class="$style.thumb" @click="aileen">
+              <div :class="$style.overlay" tabindex="0">
+                Aileen Dietrich
+              </div>
               <img
                 src="@/assets/aileen.png"
                 alt="image"
@@ -72,6 +74,15 @@ export default {
 .portfolio {
   text-align: center;
 
+  .row {
+    display: flex;
+    justify-content: center;
+    .wrapper {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
   .thumb {
     position: relative;
     margin-bottom: $spacing-default;
@@ -94,6 +105,15 @@ export default {
       border-radius: $default-border-radius;
 
       &:hover {
+        background-color: rgba(64, 70, 95, 0.92);
+        color: $background-white;
+        transition: $transition;
+        -webkit-box-shadow: $box-shadow;
+        -moz-box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
+      }
+
+      &:focus {
         background-color: rgba(64, 70, 95, 0.92);
         color: $background-white;
         transition: $transition;

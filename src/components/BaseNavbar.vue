@@ -2,7 +2,7 @@
   <div>
     <b-navbar
       ref="navbar"
-      :class="[$style.navbar, { bg: isActive }]"
+      :class="[$style.navbar, { bg: isActive }, { menu: menuOpen }]"
       toggleable="md"
       fixed="top"
     >
@@ -22,7 +22,10 @@
         />
       </b-nav-item>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle
+        target="nav-collapse"
+        @click="openMenu"
+      ></b-navbar-toggle>
 
       <b-collapse :class="$style.items" id="nav-collapse" is-nav>
         <b-nav-item
@@ -68,7 +71,7 @@
 export default {
   name: 'BaseNavbar',
   data() {
-    return { scrollPosition: null, isActive: false };
+    return { scrollPosition: null, isActive: false, menuOpen: false };
   },
   methods: {
     updateScroll() {
@@ -78,6 +81,9 @@ export default {
       } else {
         this.isActive = false;
       }
+    },
+    openMenu() {
+      this.menuOpen = !this.menuOpen;
     },
   },
   mounted() {
@@ -94,6 +100,9 @@ export default {
   height: 90px;
   background-color: rgba($color: $background-color, $alpha: 0);
   transition: $transition;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
 
   .logo {
     a {
@@ -145,5 +154,8 @@ export default {
 .bg {
   background-color: $background-color;
   transition: $transition;
+}
+.menu {
+  height: 300px;
 }
 </style>
