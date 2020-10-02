@@ -86,6 +86,7 @@ export default {
 
     h2 {
       font-weight: 600;
+      font-size: 18pt;
     }
 
     &:hover {
