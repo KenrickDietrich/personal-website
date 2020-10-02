@@ -90,10 +90,14 @@ export default {
       }
     },
     openMenu() {
-      this.menuOpen = !this.menuOpen;
+      if (window.innerWidth < 767) {
+        this.menuOpen = !this.menuOpen;
+      }
     },
     closeMenu() {
-      this.menuOpen = !this.menuOpen;
+      if (window.innerWidth < 767) {
+        this.menuOpen = !this.menuOpen;
+      }
     },
   },
   mounted() {
@@ -167,5 +171,11 @@ export default {
 }
 .menu {
   height: 260px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: $background-color;
+  }
 }
 </style>

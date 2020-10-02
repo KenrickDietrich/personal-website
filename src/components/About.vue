@@ -2,11 +2,11 @@
   <base-section id="about" :class="$style.about">
     <b-container class="container" fluid>
       <b-row>
-        <b-col>
+        <b-col md="6">
           <img src="../assets/about.jpg" alt="image" />
         </b-col>
-        <b-col>
-          <div>
+        <b-col md="5">
+          <div :class="$style.text">
             <h1>Over mij</h1>
             <p>
               Ik ben Kenrick Dietrich en ben 20 jaar oud. Ik ben
@@ -48,6 +48,10 @@ export default {
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
+  }
+
+  .text {
+    padding-top: 50px;
   }
 }
 </style>
