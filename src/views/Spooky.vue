@@ -13,16 +13,29 @@
     <div :class="$style.background" id="header">
       <h1>Spooky Trouble</h1>
       <div :class="$style.hero" @click="openGame">
-        <img :class="$style.logo" src="@/assets/spooky-logo.png" />
-        <img src="@/assets/Character.png" />
-        <img :class="$style.floor" src="@/assets/Floor.png" />
+        <img
+          :class="$style.logo"
+          src="@/assets/spooky-logo.png"
+          alt="Spooky Trouble logo"
+        />
+        <img
+          src="@/assets/Character.png"
+          alt="Spooky Trouble character"
+        />
+        <img
+          :class="$style.floor"
+          src="@/assets/Floor.png"
+          alt="Spooky Trouble grond"
+        />
         <img
           :class="[$style.spook, $style.first]"
           src="@/assets/Spook1.png"
+          alt="Spooky Trouble spook"
         />
         <img
           :class="[$style.spook, $style.second]"
           src="@/assets/Spook2.png"
+          alt="Spooky Trouble spook"
         />
       </div>
     </div>
@@ -30,7 +43,7 @@
       <b-container :class="$style.container" fluid>
         <base-row>
           <b-row data-aos="fade-up">
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="$style.thumb">
                 <base-text-container
                   :title="'Why'"
@@ -40,11 +53,12 @@
                 />
               </div>
             </b-col>
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="[$style.thumb, $style.hover]">
                 <img
                   :class="$style.image"
                   src="@/assets/Character.png"
+                  alt="Spooky Trouble character"
                 />
               </div>
             </b-col>
@@ -52,7 +66,7 @@
         </base-row>
         <base-row>
           <b-row data-aos="fade-up">
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="$style.thumb">
                 <base-text-container
                   :title="'Story'"
@@ -63,20 +77,25 @@
                 </base-text-container>
               </div>
             </b-col>
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="[$style.thumb, $style.hover]">
                 <img
                   :class="$style.image"
                   src="@/assets/Spook1.png"
+                  alt="Spooky Trouble spook"
                 />
-                <img :class="$style.boo" src="@/assets/Boo.png" />
+                <img
+                  :class="$style.boo"
+                  src="@/assets/Boo.png"
+                  alt="Boo tekst"
+                />
               </div>
             </b-col>
           </b-row>
         </base-row>
         <base-row>
           <b-row data-aos="fade-up">
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="$style.thumb">
                 <base-text-container
                   :title="'Goal'"
@@ -86,16 +105,20 @@
                 ></base-text-container>
               </div>
             </b-col>
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="[$style.thumb, $style.hover]">
-                <img :class="$style.image" src="@/assets/Key.png" />
+                <img
+                  :class="$style.image"
+                  src="@/assets/Key.png"
+                  alt="Foto sleutel"
+                />
               </div>
             </b-col>
           </b-row>
         </base-row>
         <base-row>
           <b-row data-aos="fade-up">
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="$style.thumb">
                 <base-text-container
                   :title="'How to play'"
@@ -105,9 +128,13 @@
                 ></base-text-container>
               </div>
             </b-col>
-            <b-col md="6">
+            <b-col lg="6">
               <div :class="[$style.thumb, $style.hover]">
-                <img :class="$style.image" src="@/assets/Keys.png" />
+                <img
+                  :class="$style.image"
+                  src="@/assets/Keys.png"
+                  alt="Foto toetsenbord"
+                />
               </div>
             </b-col>
           </b-row>
@@ -228,24 +255,28 @@ export default {
     padding: $spacing-default;
     margin-bottom: $spacing-default;
     transition: $transition;
-    min-height: 300px;
+    min-height: 400px;
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
+
+    img {
+      margin-top: 40px;
+    }
   }
 
   .hover {
-    height: 300px;
+    height: 400px;
     padding: $spacing-default;
     &:active {
       background: rgba($color: $primary-color-text, $alpha: 0.8);
       color: $background-color;
-      padding: 30px;
+      padding-top: 30px;
     }
     &:hover {
       background: rgba($color: $primary-color-text, $alpha: 0.8);
       color: $background-color;
-      padding: 30px;
+      padding-top: 30px;
     }
   }
 

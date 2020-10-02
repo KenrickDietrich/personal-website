@@ -11,7 +11,7 @@
               </div>
               <img
                 src="@/assets/spookytrouble.png"
-                alt="image"
+                alt="Foto van Spooky Trouble game"
                 class="img-fluid"
               />
             </div>
@@ -23,7 +23,7 @@
               </div>
               <img
                 src="@/assets/gent.png"
-                alt="image"
+                alt="Foto van Gent In The Middle website"
                 class="img-fluid"
               />
             </div>
@@ -35,7 +35,7 @@
               </div>
               <img
                 src="@/assets/aileen.png"
-                alt="image"
+                alt="Foto van Aileen Dietrich website"
                 class="img-fluid"
               />
             </div>

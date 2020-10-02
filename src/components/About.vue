@@ -3,7 +3,7 @@
     <b-container class="container" fluid>
       <b-row>
         <b-col md="6">
-          <img src="../assets/about.jpg" alt="image" />
+          <img src="../assets/about.jpg" alt="foto van Kenrick" />
         </b-col>
         <b-col md="5">
           <div :class="$style.text">
