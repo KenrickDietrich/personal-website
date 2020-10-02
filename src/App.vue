@@ -16,6 +16,6 @@ body {
   color: $primary-color-text;
   margin: 0;
   padding: 0;
-  background-color: $background-color;
+  background-color: $background-white;
 }
 </style>

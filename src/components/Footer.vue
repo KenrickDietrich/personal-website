@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" module>
 .footer {
-  background: #acacac;
+  background: #575757;
   text-align: center;
   padding: 100px;
   .title {

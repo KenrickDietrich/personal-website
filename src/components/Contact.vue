@@ -50,6 +50,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+
+    a {
+      color: #0051a8;
+    }
 
     .icon {
       margin-right: $spacing-small;

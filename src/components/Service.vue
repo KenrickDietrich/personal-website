@@ -14,7 +14,6 @@
                 />
               </div>
               <h2>Vue.js</h2>
-              <p>Vue.js websites of web applicaties</p>
             </div>
           </b-col>
           <b-col lg="4" :class="$style.wrapper">
@@ -26,7 +25,6 @@
                 />
               </div>
               <h2>Android</h2>
-              <p>Naitive Android apps</p>
             </div>
           </b-col>
           <b-col lg="4" :class="$style.wrapper">
@@ -38,7 +36,6 @@
                 />
               </div>
               <h2>java</h2>
-              <p>Java applicaties</p>
             </div>
           </b-col>
         </b-row>
@@ -82,10 +79,14 @@ export default {
     padding: 42px 22px;
     margin-bottom: $spacing-default;
     transition: $transition;
-    height: 300px;
+    height: 250px;
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
+
+    h2 {
+      font-weight: 500;
+    }
 
     &:hover {
       background: rgba($color: $primary-color-text, $alpha: 0.8);
