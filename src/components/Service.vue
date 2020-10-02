@@ -13,7 +13,7 @@
                   size="6x"
                 />
               </div>
-              <h4>Vue.js</h4>
+              <h2>Vue.js</h2>
               <p>Vue.js websites of web applicaties</p>
             </div>
           </b-col>
@@ -25,7 +25,7 @@
                   size="6x"
                 />
               </div>
-              <h4>Android</h4>
+              <h2>Android</h2>
               <p>Naitive Android apps</p>
             </div>
           </b-col>
@@ -37,7 +37,7 @@
                   size="6x"
                 />
               </div>
-              <h4>java</h4>
+              <h2>java</h2>
               <p>Java applicaties</p>
             </div>
           </b-col>
