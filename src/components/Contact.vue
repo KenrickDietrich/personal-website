@@ -3,24 +3,13 @@
     <base-row>
       <h2>Contact Info</h2>
       <div :class="$style.content">
-        <div :class="$style.label">
-          <font-awesome-icon
-            :class="$style.icon"
-            :icon="['fas', 'envelope']"
-            size="2x"
-          />
-          <a href="mailto:kenrickdietrich@gmail.com">
-            kenrickdietrich@gmail.com
-          </a>
-        </div>
-        <div :class="$style.label">
-          <font-awesome-icon
-            :class="$style.icon"
-            :icon="['fas', 'phone']"
-            size="2x"
-          />
-          <label>06 39 27 14 49</label>
-        </div>
+        <a
+          :class="$style.label"
+          href="mailto:kenrickdietrich@gmail.com"
+        >
+          kenrickdietrich@gmail.com
+        </a>
+        <label :class="$style.label">06 39 27 14 49</label>
       </div>
     </base-row>
   </section>
@@ -46,7 +35,7 @@ export default {
   }
 
   .label {
-    padding: $spacing-default;
+    padding: $spacing-small;
     display: flex;
     align-items: center;
     justify-content: center;

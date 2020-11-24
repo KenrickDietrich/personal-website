@@ -2,9 +2,12 @@
   <base-section id="service" :class="$style.service">
     <b-container :class="$style.container" fluid>
       <h1>Ik heb ervaring met</h1>
-
       <base-row>
-        <b-row data-aos="fade-up" :class="$style.row">
+        <b-row
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+          :class="$style.row"
+        >
           <b-col lg="4" :class="$style.wrapper">
             <div :class="$style.servicethumb" tabindex="0">
               <img
@@ -72,12 +75,12 @@ export default {
     box-shadow: $box-shadow;
 
     .icon {
-      max-height: 75%;
+      max-height: 70%;
     }
 
     h2 {
       font-weight: 600;
-      font-size: 24pt;
+      font-size: 20pt;
       padding: $spacing-default;
     }
   }
