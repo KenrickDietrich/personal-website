@@ -1,7 +1,7 @@
 <template>
   <base-section id="about" :class="$style.about">
     <b-container class="container" fluid>
-      <b-row>
+      <b-row style="align-items: center">
         <b-col md="6">
           <img src="../assets/about.jpg" alt="foto van Kenrick" />
         </b-col>
@@ -49,9 +49,11 @@ export default {
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
   }
+}
 
+@media screen and (max-width: 1024px) {
   .text {
-    padding-top: 50px;
+    padding-top: $spacing-large;
   }
 }
 </style>

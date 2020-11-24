@@ -16,7 +16,7 @@ export default {
 .footer {
   background: #575757;
   text-align: center;
-  padding: 100px;
+  padding: $spacing-large;
   .title {
     color: white;
     font-weight: 700;

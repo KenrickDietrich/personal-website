@@ -18,7 +18,7 @@
         >
           <img
             :class="$style.img"
-            src="../assets/logo.png"
+            src="@/assets/logo.png"
             alt="Logo"
           />
         </b-nav-item>

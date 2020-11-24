@@ -7,35 +7,23 @@
         <b-row data-aos="fade-up" :class="$style.row">
           <b-col lg="4" :class="$style.wrapper">
             <div :class="$style.servicethumb" tabindex="0">
-              <div :class="$style.iconcontainer">
-                <font-awesome-icon
-                  :icon="['fab', 'vuejs']"
-                  size="6x"
-                />
-              </div>
+              <img
+                :class="$style.icon"
+                src="@/assets/vue-dot-js.svg"
+              />
               <h2>Vue.js</h2>
             </div>
           </b-col>
           <b-col lg="4" :class="$style.wrapper">
             <div :class="$style.servicethumb" tabindex="0">
-              <div :class="$style.iconcontainer">
-                <font-awesome-icon
-                  :icon="['fab', 'android']"
-                  size="6x"
-                />
-              </div>
-              <h2>Android</h2>
+              <img :class="$style.icon" src="@/assets/react.svg" />
+              <h2>React Native</h2>
             </div>
           </b-col>
           <b-col lg="4" :class="$style.wrapper">
             <div :class="$style.servicethumb" tabindex="0">
-              <div :class="$style.iconcontainer">
-                <font-awesome-icon
-                  :icon="['fab', 'java']"
-                  size="6x"
-                />
-              </div>
-              <h2>java</h2>
+              <img :class="$style.icon" src="@/assets/swift.svg" />
+              <h2>Swift</h2>
             </div>
           </b-col>
         </b-row>
@@ -76,33 +64,22 @@ export default {
   .servicethumb {
     background: $background-white;
     border-radius: $default-border-radius;
-    padding: 42px 22px;
+    padding: $spacing-large;
     margin-bottom: $spacing-default;
-    transition: $transition;
     height: 250px;
     -webkit-box-shadow: $box-shadow;
     -moz-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
 
+    .icon {
+      max-height: 75%;
+    }
+
     h2 {
       font-weight: 600;
-      font-size: 18pt;
+      font-size: 24pt;
+      padding: $spacing-default;
     }
-
-    &:hover {
-      background: rgba($color: $primary-color-text, $alpha: 0.8);
-      color: $background-color;
-      padding-top: 50px;
-    }
-    &:focus {
-      background: rgba($color: $primary-color-text, $alpha: 0.8);
-      color: $background-color;
-      padding-top: 50px;
-    }
-  }
-
-  .iconcontainer {
-    padding-bottom: $spacing-default;
   }
 }
 </style>
