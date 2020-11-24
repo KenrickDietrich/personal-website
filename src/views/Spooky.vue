@@ -54,7 +54,7 @@
               </div>
             </b-col>
             <b-col lg="6">
-              <div :class="[$style.thumb, $style.hover]">
+              <div :class="$style.thumb">
                 <img
                   :class="$style.image"
                   src="@/assets/Character.png"
@@ -71,7 +71,7 @@
                 <base-text-container
                   :title="'Story'"
                   :paragraph="
-                    'You find yourself in an old and abandoned house. You hear noises, old wood creaking. You see something and rub your eyes, are those ghosts? Find your way out.'
+                    'You find yourself in an old and abandoned house. You hear noises, old wood creaking. You see something and rub your eyes, are those ghosts? Try to find your way out.'
                   "
                 >
                 </base-text-container>
@@ -106,7 +106,7 @@
               </div>
             </b-col>
             <b-col lg="6">
-              <div :class="[$style.thumb, $style.hover]">
+              <div :class="$style.thumb">
                 <img
                   :class="$style.image"
                   src="@/assets/Key.png"
@@ -129,7 +129,7 @@
               </div>
             </b-col>
             <b-col lg="6">
-              <div :class="[$style.thumb, $style.hover]">
+              <div :class="$style.thumb">
                 <img
                   :class="$style.image"
                   src="@/assets/Keys.png"
