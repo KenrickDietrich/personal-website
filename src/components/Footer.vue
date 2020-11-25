@@ -1,7 +1,7 @@
 <template>
   <section id="footer" :class="$style.footer">
     <div :class="$style.title">
-      Copyright © 2020 Kenrick Dietrich software engineer
+      Copyright © 2020 Kenrick Dietrich
     </div>
   </section>
 </template>
